@@ -24,18 +24,21 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
+  /* padding: 4rem; */
 }
 
 .countries {
   /* margin-bottom: 8rem; */
-  display: flex;
-
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   font-size: 2rem;
   opacity: 0;
   transition: opacity 1s;
 }
 
 .country {
+  position: relative;
   background-color: #fff;
   box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
   font-size: 1.8rem;
@@ -44,7 +47,12 @@ body {
   margin: 0 3rem;
   /* overflow: hidden; */
 }
-
+.btnDel {
+  position: absolute;
+  right: 0;
+  padding: 1rem;
+  font-size: 2rem;
+}
 .neighbour::before {
   content: 'Neighbour country';
   width: 100%;
